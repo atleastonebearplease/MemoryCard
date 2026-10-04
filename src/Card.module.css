@@ -1,0 +1,36 @@
+.toolCard {
+    width: 20rem;
+    height: 5rem;
+    background-color: beige;
+
+    display: flex;
+    padding: 1rem;
+}
+
+.toolCard__button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    border: none;
+}
+
+.toolCard__buttonGroup {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.goButton {
+    background-color: rgb(122, 197, 122);
+}
+
+.optionsButton {
+    background-color: rgb(200, 223, 253);
+}
+
+.goButton:hover {
+    background-color: rgb(151, 218, 151);
+}
+
+.goButton:active {
+    background-color: rgb(69, 110, 69);
+}
