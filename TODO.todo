@@ -3,9 +3,15 @@ Plan:
 
     So the Gameboard needs to contain the container that hosts the cards. It, in CSS, would control the layout. We can simply create an arbitrarily long array of cards, which for now can just contain a colored div so that we can arrage the cards on the screen.
 
+    I guess we need to find an API to get images and names from of some kind. 
+
+    We need a to match up the cards. I'm guessing it's easy enough to just keep a list of the cards that have been chosen. Each time we choose a card, we check the list to see if it has already been picked. If not, then we add it to the list. If it has, then we need to check if the current score is greater than the best score. if it is, then we assign it the new best score. We could just do that each turn actually. 
+
+    What we don't really know yet is how to arrange the original photos. First we need some photos to arrange. And the project wants us to do an API call with useEffect. It doesn't exactly seem necessary? But it is possible I suppose. Should we just focus on the logic first with static images, then add in the useEffect stuff after? 
+
 TODO: 
     ☐ GameBoard component
-        ☐ Create a column layout that expands for the number of cards
-        ☐ Make a list of cards with a function inside the game board, then display them in the render
+        ✔ Create a column layout that expands for the number of cards @done(26-10-05 19:30)
+        ✔ Make a list of cards with a function inside the game board, then display them in the render @done(26-10-05 19:30)
     ☐ Card component
-        ☐ Contains a colored div of a certain size
+        ✔ Contains a colored div of a certain size for now so we can make the layout @done(26-10-05 19:30)
