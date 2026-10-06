@@ -1,0 +1,11 @@
+Plan: 
+    We need the GameBoard, then cards and score. I think the cards and just be in the board without being wrapped up in anything else. Each card can be assigned an image on run and then the order of the cards can be shuffled around. They can be simply stored in a list and then the list shuffled at each go. We don't have to worry about the shuffling part now. We can start with the easy stuff
+
+    So the Gameboard needs to contain the container that hosts the cards. It, in CSS, would control the layout. We can simply create an arbitrarily long array of cards, which for now can just contain a colored div so that we can arrage the cards on the screen.
+
+TODO: 
+    ☐ GameBoard component
+        ☐ Create a column layout that expands for the number of cards
+        ☐ Make a list of cards with a function inside the game board, then display them in the render
+    ☐ Card component
+        ☐ Contains a colored div of a certain size

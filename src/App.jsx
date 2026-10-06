@@ -1,10 +1,11 @@
 import './App.css'
+import { GameBoard } from "./GameBoard"
 
 function App() {
 
   return (
     <>
-      <h1>Hello World!</h1>
+      <GameBoard></GameBoard>
     </>
   )
 }

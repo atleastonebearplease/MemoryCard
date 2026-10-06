@@ -1,0 +1,10 @@
+.game {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+}
