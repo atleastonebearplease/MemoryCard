@@ -16,8 +16,14 @@ export function GameBoard() {
             setChosenIDs([]);
             setScore(0);
         } else {
-            setChosenIDs([...chosenIDs, card.id]);
+            const newScore = score + 1;
             
+            setChosenIDs([...chosenIDs, card.id]);
+            setScore(newScore);
+
+            if(newScore >= bestScore) {
+                setBestScore(newScore);
+            }
         }
 
         setShuffledList(shuffleCards(shuffledList));
