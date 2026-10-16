@@ -4,16 +4,14 @@ for(let i = 0; i < 20; i++) {
     originalCardList.push({
         id: crypto.randomUUID(),
         value: i
-    })
+    });
 }
 
 export let chosenList = [];
 export let shuffledList = [];
 
-export function cardIsChosen(cardID) {
-    return chosenList.some((card) => {
-        return card.id === cardID
-    });
+export function cardIsChosen(chosenIDs, cardID) {
+    return chosenIDs.includes(cardID);
 }
 
 export function shuffleCards(array) {
@@ -26,6 +24,14 @@ export function shuffleCards(array) {
 
     return result;
 }
+
+export function chooseCard(cardID) {
+    chosenList.push(cardID);
+}
+
+shuffledList = shuffleCards(originalCardList);
+
+
 
 /* 
 Clicks a card

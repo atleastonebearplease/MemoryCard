@@ -1,4 +1,5 @@
 Plan: 
+    ☐ Item to keep plan alive when archiving
     We need the GameBoard, then cards and score. I think the cards and just be in the board without being wrapped up in anything else. Each card can be assigned an image on run and then the order of the cards can be shuffled around. They can be simply stored in a list and then the list shuffled at each go. We don't have to worry about the shuffling part now. We can start with the easy stuff
 
     So the Gameboard needs to contain the container that hosts the cards. It, in CSS, would control the layout. We can simply create an arbitrarily long array of cards, which for now can just contain a colored div so that we can arrage the cards on the screen.
@@ -12,6 +13,7 @@ Plan:
     Let's worry about the logic of playing the game. We can figure out where to use useEffect later. The logic of the game can very simply be represented by placing a number on the squares and shuffling the squares at each click. Let's focus on that
 
     Pseudocode: 
+        ☐ Item to keep alive when archiving
         The user clicks a card
         If it has not been clicked
             Add its ID to the list of clicked cards
@@ -24,23 +26,27 @@ Plan:
             clear the clicked cards
             shuffle the cards 
 
-                
-
 TODO: 
     ☐ GameBoard component
-        ✔ Create a column layout that expands for the number of cards @done(26-10-05 19:30)
-        ✔ Make a list of cards with a function inside the game board, then display them in the render @done(26-10-05 19:30)
-        ☐ onClick call back for the cards to then check if the card has been clicked or not
-        ☐ An array to keep track of which have already been clicked
-        ☐ Another array to host all of the cards in a shuffled order
-        ☐ A third array to host all of the original objects in the original order??
     ☐ Card component
-        ✔ Contains a colored div of a certain size for now so we can make the layout @done(26-10-05 19:30)
-        ☐ Need a prop for the "ID" of the card - just a number for now.
+        ☐ Add card ID to list on click
+        ☐ Check that the card chosen is unique
+        ☐ If the card was unique, add to score, set best, etc.
+        ☐ If not, then we need to clear the list, clear the score, and shuffle again
     ☐ Find an API to pull from
-
-
-
 
     ☐ Callback to denote that a card has been clicked passed into the Card component so GameBoard can check if it was a valid move
     ☐ 
+
+REMEMBER, first make it work, then make it clean:
+    ☐ Keep alive
+
+Archive:
+  ✔ Create a column layout that expands for the number of cards @done(26-10-05 19:30) @project(TODO)
+  ✔ Make a list of cards with a function inside the game board, then display them in the render @done(26-10-05 19:30) @project(TODO)
+  ✔ onClick call back for the cards to then check if the card has been clicked or not @done(26-10-16 08:42) @project(TODO)
+  ✔ An array to keep track of which have already been clicked @done(26-10-16 08:42) @project(TODO)
+  ✔ Another array to host all of the cards in a shuffled order @done(26-10-16 08:42) @project(TODO)
+  ✔ A third array to host all of the original objects in the original order?? @done(26-10-16 08:42) @project(TODO)
+  ✔ Contains a colored div of a certain size for now so we can make the layout @done(26-10-05 19:30) @project(TODO)
+  ✔ Need a prop for the "ID" of the card - just a number for now. @done(26-10-16 08:42) @project(TODO)
