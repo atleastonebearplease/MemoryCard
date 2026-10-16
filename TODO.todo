@@ -9,9 +9,38 @@ Plan:
 
     What we don't really know yet is how to arrange the original photos. First we need some photos to arrange. And the project wants us to do an API call with useEffect. It doesn't exactly seem necessary? But it is possible I suppose. Should we just focus on the logic first with static images, then add in the useEffect stuff after? 
 
+    Let's worry about the logic of playing the game. We can figure out where to use useEffect later. The logic of the game can very simply be represented by placing a number on the squares and shuffling the squares at each click. Let's focus on that
+
+    Pseudocode: 
+        The user clicks a card
+        If it has not been clicked
+            Add its ID to the list of clicked cards
+            Add a point
+            If the current score is greater than the best score
+                set the best score to the current score
+            Shuffle the card ID
+        If it has been clicked
+            set the score to zero
+            clear the clicked cards
+            shuffle the cards 
+
+                
+
 TODO: 
     ☐ GameBoard component
         ✔ Create a column layout that expands for the number of cards @done(26-10-05 19:30)
         ✔ Make a list of cards with a function inside the game board, then display them in the render @done(26-10-05 19:30)
+        ☐ onClick call back for the cards to then check if the card has been clicked or not
+        ☐ An array to keep track of which have already been clicked
+        ☐ Another array to host all of the cards in a shuffled order
+        ☐ A third array to host all of the original objects in the original order??
     ☐ Card component
         ✔ Contains a colored div of a certain size for now so we can make the layout @done(26-10-05 19:30)
+        ☐ Need a prop for the "ID" of the card - just a number for now.
+    ☐ Find an API to pull from
+
+
+
+
+    ☐ Callback to denote that a card has been clicked passed into the Card component so GameBoard can check if it was a valid move
+    ☐ 

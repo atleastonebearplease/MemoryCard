@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { MemoryCard } from './MemoryCard.jsx';
+import { originalCardList, shuffledList, chosenList } from './cardLists.js';
 
 export function GameBoard() {
     const [score, setScore] = useState(0);
@@ -6,10 +8,9 @@ export function GameBoard() {
     
     const cards = [];
 
-    for(let i = 0; i < 20; i++) {
-        cards.push(<Card key={i} />);
+    for(let i = 0; i < originalCardList.length; i++) {
+        cards.push(<MemoryCard key={originalCardList[i].id} value={originalCardList[i].value} id={originalCardList[i].id}/>);
     }
-
 
     return (
         <div className="game">
@@ -21,11 +22,5 @@ export function GameBoard() {
                 {cards}
             </div>
         </div>
-    )
-}
-
-function Card() {
-    return (
-        <div className="test-card"></div>
     )
 }
