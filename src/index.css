@@ -2,6 +2,9 @@
 
 :root {
     /*Variables here*/
+    --primary: #9af075;
+    --secondary: #D7F075;
+    --tertiary: #75f08e;
 }
 
 * {

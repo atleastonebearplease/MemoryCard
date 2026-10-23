@@ -1,49 +1,23 @@
 Plan: 
     ☐ Item to keep plan alive when archiving
-    We need the GameBoard, then cards and score. I think the cards and just be in the board without being wrapped up in anything else. Each card can be assigned an image on run and then the order of the cards can be shuffled around. They can be simply stored in a list and then the list shuffled at each go. We don't have to worry about the shuffling part now. We can start with the easy stuff
 
-    So the Gameboard needs to contain the container that hosts the cards. It, in CSS, would control the layout. We can simply create an arbitrarily long array of cards, which for now can just contain a colored div so that we can arrage the cards on the screen.
-
-    I guess we need to find an API to get images and names from of some kind. 
-
-    We need a to match up the cards. I'm guessing it's easy enough to just keep a list of the cards that have been chosen. Each time we choose a card, we check the list to see if it has already been picked. If not, then we add it to the list. If it has, then we need to check if the current score is greater than the best score. if it is, then we assign it the new best score. We could just do that each turn actually. 
-
-    What we don't really know yet is how to arrange the original photos. First we need some photos to arrange. And the project wants us to do an API call with useEffect. It doesn't exactly seem necessary? But it is possible I suppose. Should we just focus on the logic first with static images, then add in the useEffect stuff after? 
-
-    Let's worry about the logic of playing the game. We can figure out where to use useEffect later. The logic of the game can very simply be represented by placing a number on the squares and shuffling the squares at each click. Let's focus on that
-
-
-    Pseudocode: 
-        ☐ Item to keep alive when archiving
-        The user clicks a card
-        If it has not been clicked
-            Add its ID to the list of clicked cards
-            Add a point
-            If the current score is greater than the best score
-                set the best score to the current score
-            Shuffle the card ID
-        If it has been clicked
-            set the score to zero
-            clear the clicked cards
-            shuffle the cards 
-
-TODO: 
-    ☐ GameBoard component
-        Okay, so we have all of the logic for scoring done. It relied on IDs, not values, so it should already work when doing the images part. Now we need to figure out how to get images. That should complete the functionality. We are supposed to use useEffect. I think we'll have to ask Claude on that one, not sure how that fits into the picture.
-    ☐ Card component
-        ✔ Add card ID to list on click @done(26-10-16 09:18)
-        ✔ Check that the card chosen is unique @done(26-10-16 09:18)
-        ✔ If the card was unique, add to score, set best, etc. @done(26-10-16 09:18)
-        ✔ If not, then we need to clear the list, clear the score, and shuffle again @done(26-10-16 09:18)
-    ☐ Find an API to pull from
-
-    ☐ Callback to denote that a card has been clicked passed into the Card component so GameBoard can check if it was a valid move
-    ☐ 
+TODO:
+    ☐ Now we need to get this thing looking right. We have all of the components we need.
+        We feel like stopping now. This is merely an urge. We can study the nature of the urge, then proceed.
 
 REMEMBER, first make it work, then make it clean:
     ☐ Keep alive
 
 Archive:
+  ✔ GameBoard component @done(26-10-23 14:26) @project(TODO)
+  ✔ Okay, so we have all of the logic for scoring done. It relied on IDs, not values, so it should already work when doing the images part. Now we need to figure out how to get images. That should complete the functionality. We are supposed to use useEffect. I think we'll have to ask Claude on that one, not sure how that fits into the picture. @done(26-10-23 14:26) @project(TODO)
+  ✔ Card component @done(26-10-23 14:26) @project(TODO)
+  ✔ Find an API to pull from @done(26-10-23 14:26) @project(TODO)
+  ✔ Add card ID to list on click @done(26-10-16 09:18) @project(TODO)
+  ✔ Check that the card chosen is unique @done(26-10-16 09:18) @project(TODO)
+  ✔ If the card was unique, add to score, set best, etc. @done(26-10-16 09:18) @project(TODO)
+  ✔ If not, then we need to clear the list, clear the score, and shuffle again @done(26-10-16 09:18) @project(TODO)
+  ✔ Callback to denote that a card has been clicked passed into the Card component so GameBoard can check if it was a valid move @done(26-10-23 14:07) @project(TODO)
   ✔ Create a column layout that expands for the number of cards @done(26-10-05 19:30) @project(TODO)
   ✔ Make a list of cards with a function inside the game board, then display them in the render @done(26-10-05 19:30) @project(TODO)
   ✔ onClick call back for the cards to then check if the card has been clicked or not @done(26-10-16 08:42) @project(TODO)
