@@ -1,12 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MemoryCard } from './MemoryCard.jsx';
-import { originalCardList, shuffleCards, cardIsChosen } from './cardLists.js';
+import { shuffleCards, cardIsChosen, fetchCards } from './cardLists.js';
 
 export function GameBoard() {
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
     const [chosenIDs, setChosenIDs] = useState([]);
-    const [shuffledList, setShuffledList] = useState(() => shuffleCards(originalCardList))
+    const [shuffledList, setShuffledList] = useState([]);
+
+    useEffect(() => {
+        let ignore = false;
+
+        fetchCards(20).then(cards => {
+            if(!ignore) {
+                setShuffledList(shuffleCards(cards));
+            }
+        })
+
+        return () => {
+            ignore = true;
+        }
+    }, []);
 
     function cardClick(card) {
         console.log(card.value);
@@ -32,10 +46,15 @@ export function GameBoard() {
     const cards = [];
     for(let i = 0; i < shuffledList.length; i++) {
         cards.push(<MemoryCard 
-            key={shuffledList[i].id} 
-            value={shuffledList[i].value} 
+            key={shuffledList[i].id}
+            name={shuffledList[i].name}
+            image={shuffledList[i].image}
             id={shuffledList[i].id}
             onClick={() => {cardClick(shuffledList[i])}}/>);
+    }
+
+    if(shuffledList.length === 0) {
+        return <h1>Loading Cards...</h1>;
     }
 
     return (

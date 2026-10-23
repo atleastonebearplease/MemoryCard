@@ -12,6 +12,7 @@ Plan:
 
     Let's worry about the logic of playing the game. We can figure out where to use useEffect later. The logic of the game can very simply be represented by placing a number on the squares and shuffling the squares at each click. Let's focus on that
 
+
     Pseudocode: 
         ☐ Item to keep alive when archiving
         The user clicks a card
@@ -28,11 +29,12 @@ Plan:
 
 TODO: 
     ☐ GameBoard component
+        Okay, so we have all of the logic for scoring done. It relied on IDs, not values, so it should already work when doing the images part. Now we need to figure out how to get images. That should complete the functionality. We are supposed to use useEffect. I think we'll have to ask Claude on that one, not sure how that fits into the picture.
     ☐ Card component
-        ☐ Add card ID to list on click
-        ☐ Check that the card chosen is unique
-        ☐ If the card was unique, add to score, set best, etc.
-        ☐ If not, then we need to clear the list, clear the score, and shuffle again
+        ✔ Add card ID to list on click @done(26-10-16 09:18)
+        ✔ Check that the card chosen is unique @done(26-10-16 09:18)
+        ✔ If the card was unique, add to score, set best, etc. @done(26-10-16 09:18)
+        ✔ If not, then we need to clear the list, clear the score, and shuffle again @done(26-10-16 09:18)
     ☐ Find an API to pull from
 
     ☐ Callback to denote that a card has been clicked passed into the Card component so GameBoard can check if it was a valid move

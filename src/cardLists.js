@@ -1,15 +1,3 @@
-export let originalCardList = [];
-
-for(let i = 0; i < 20; i++) {
-    originalCardList.push({
-        id: crypto.randomUUID(),
-        value: i
-    });
-}
-
-export let chosenList = [];
-export let shuffledList = [];
-
 export function cardIsChosen(chosenIDs, cardID) {
     return chosenIDs.includes(cardID);
 }
@@ -25,11 +13,23 @@ export function shuffleCards(array) {
     return result;
 }
 
-export function chooseCard(cardID) {
-    chosenList.push(cardID);
-}
+export async function fetchCards(count) {
+    const requests = []; 
 
-shuffledList = shuffleCards(originalCardList);
+    for(let i = 1; i <= count; i++) {
+        requests.push(
+            fetch(`https://pokeapi.co/api/v2/pokemon/${i}`).then(res => res.json())
+        );
+    }
+
+    const pokemon = await Promise.all(requests);
+
+    return pokemon.map(p => ({
+        id: p.id,
+        name: p.name,
+        image: p.sprites.front_default
+    }));
+}
 
 
 

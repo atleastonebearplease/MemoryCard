@@ -1,5 +1,8 @@
-export function MemoryCard({id, value, onClick}) {
+export function MemoryCard({id, onClick, image, name}) {
     return (
-        <div className="test-card" id={id} onClick={onClick}>{value}</div>
+        <div className="test-card" id={id} onClick={onClick}>
+            <img src={image} alt={name}></img>
+            <p>{name}</p>
+        </div>
     )
 }
