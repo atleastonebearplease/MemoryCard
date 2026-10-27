@@ -11,3 +11,11 @@
     box-sizing: border-box;
     font-family: "Ubuntu-Sans", sans-serif;
 }
+
+body { 
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.08) 2px, transparent 2px) 0 0 / 24px 24px,
+    linear-gradient(135deg, #1f3d16 0%, #2f5a22 50%, #1f3d16 100%);
+}

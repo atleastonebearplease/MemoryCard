@@ -54,14 +54,16 @@ export function GameBoard() {
     }
 
     if(shuffledList.length === 0) {
-        return <h1>Loading Cards...</h1>;
+        return <div className="game"><h1 className="game-title">Loading Cards...</h1></div>;
     }
 
     return (
         <div className="game">
-            <h1>Memory Card</h1>
-            <h2>Score: {score}</h2>
-            <h2>Best Score: {bestScore}</h2>
+            <header className="game-header">
+                <h2 className="score">Score: <span key={score} className="pop">{score}</span></h2>
+                <h1 className="game-title">Memory Card</h1>
+                <h2 className="score best">Best Score: <span key={bestScore} className="pop">{bestScore}</span></h2>
+            </header>
 
             <div className="card-container">
                 {cards}

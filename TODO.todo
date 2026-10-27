@@ -3,7 +3,20 @@ Plan:
 
 TODO:
     ☐ Now we need to get this thing looking right. We have all of the components we need.
-        We feel like stopping now. This is merely an urge. We can study the nature of the urge, then proceed.
+        We feel like stopping now. This is merely an urge. We can study the nature of the urge, then proceed. It is only through awareness and action that we overcome. 
+        
+    What will make this look right?:
+        ☐ Give the site a Header contianing the title
+        ☐ Center the title
+        ☐ Make score on the left, best score on the right
+        ☐ Give the whole game a "frame"
+
+        Cards: 
+            ✔ Round the card corners @done(26-10-23 14:42)
+            ✔ Give the cards a shadow @done(26-10-23 14:43)
+            ✔ Create a divide between the images and the name below @done(26-10-23 15:18)
+            ✔ Center up the images and make them larger @done(26-10-23 15:18)
+            ✔ Capitalize the first letter of each name @done(26-10-23 15:18)
 
 REMEMBER, first make it work, then make it clean:
     ☐ Keep alive
